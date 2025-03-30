@@ -3,49 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/434efcef7c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
-        <p>Web Developer | Designer | Coder</p>
         <nav>
-            <ul>
+            <img src="Images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-x" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
     </header>
+    
+    <section id="home">
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Hi, I am <span>[Your Name]</span><br> from [Your Location]</h1>
+        </div>
+    </section>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Brief introduction about yourself and your skills.</p>
+        <p>Creative developer with a love for coding and design.</p>
+    </section>
+
+    <section id="services">
+        <h2>My Services</h2>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-pen-nib"></i>
+                <h2>Web Design</h2>
+                <p>Creating clean, responsive, and visually captivating websites.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Development</h2>
+                <p>Building functional and interactive web applications.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-computer"></i>
+                <h2>Machine Learning</h2>
+                <p>Developing AI-powered solutions for real-world problems.</p>
+            </div>
+        </div>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project-card">
-            <h3>Project 1</h3>
-            <p>Description of project.</p>
-        </div>
-        <div class="project-card">
-            <h3>Project 2</h3>
-            <p>Description of project.</p>
+        <div class="projects-container">
+            <div class="project-card">Social Media Apps</div>
+            <div class="project-card">Portfolio Website</div>
+            <div class="project-card">Gaming Website</div>
         </div>
     </section>
 
     <section id="contact">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+        <h2>Contact</h2>
+        <p><i class="fa-regular fa-paper-plane"></i> your.email@example.com</p>
+        <p><i class="fa-solid fa-phone"></i> +91 XXXXXXXXXX</p>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <a href="Images/Resume.docx" download class="btn">Download CV</a>
     </section>
 
-    <script src="script.js"></script>
+    <div class="copyright">
+        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+    </div>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
 </body>
 </html>
+
