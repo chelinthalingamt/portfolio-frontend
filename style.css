@@ -46,9 +46,11 @@ header {
 }
 
 .nav-logo {
-    width: 100px; /* Adjust the size as needed */
+    width: 100px; 
     height: auto;
-    margin-right: 30px; /* Creates spacing between the image and text */
+    margin-right: 30px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* Navigation Menu */
