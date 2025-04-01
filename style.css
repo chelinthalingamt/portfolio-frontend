@@ -1,4 +1,4 @@
-/* Reset default styles */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,11 +6,11 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* Body */
 body {
-    background-color: #000;
+    background-color: #121212;
     color: #fff;
-    text-align: center;
+    line-height: 1.6;
+    padding-top: 100px; /* Offset header height */
 }
 
 /* Navbar */
@@ -20,17 +20,19 @@ header {
     top: 0;
     left: 0;
     z-index: 100;
-    background: rgba(0, 0, 0, 0.6); /* Glossy Transparent Effect */
+    background: rgba(16, 15, 15, 0.6); /* Glossy Transparent Effect */
     backdrop-filter: blur(10px);
     padding: 15px 50px;
+    height: 80px; /* Set a fixed height for the header */
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;  /* Vertically centers the content in the navbar */
     max-width: 1100px;
     margin: 0 auto;
+    height: 50px; /* Set a fixed height for the navbar content */
 }
 
 /* Name in Navbar */
@@ -46,6 +48,7 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 25px;
+    align-items: center;  /* Vertically centers the nav items */
 }
 
 nav ul li {
@@ -58,6 +61,8 @@ nav ul li a {
     font-weight: 600;
     padding: 5px 10px;
     transition: 0.3s ease;
+    display: inline-block;
+    text-align: center; /* Ensures the text is centered */
 }
 
 /* Line Animation on Hover */
@@ -68,84 +73,197 @@ nav ul li a::after {
     width: 0%;
     background: white;
     transition: width 0.3s ease-in-out;
-    margin: auto;
+    margin: 0 auto;
+    text-align: center; /* Centering the underline */
 }
 
 nav ul li a:hover::after {
     width: 100%;
 }
 
-/* Hero Section */
-.hero-text {
-    font-size: 40px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    margin-top: 150px;
-}
-
-/* Sections */
+/* Adjust scroll-margin-top for sections to prevent overlap with navbar */
 #about, #services, #projects, #contact {
+    scroll-margin-top: 80px; /* Match the header height */
     padding: 50px 20px;
     text-align: center;
 }
 
-/* Services & Projects Containers */
-.services-list, .projects-container {
+/* Optional: Change navbar color to match the background when scrolling */
+header.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+
+/* Home Section */
+#home {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#home .header-text p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+#home .header-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#home .header-text span {
+    color: #fff;
+}
+
+/* About Section */
+#about {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+#services {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.services-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-item {
+    background-color: #222;
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-item:hover i {
+    color: #feda37;
+    transform: scale(1.2);
+}
+
+.service-item i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.projects-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-/* Cards */
-.project-card, .services-list div {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-    transition: 0.3s ease-in-out;
-    backdrop-filter: blur(5px);
+.project-card {
+    background-color: #222;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effects */
-.project-card:hover, .services-list div:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.05);
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: white;
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s ease;
-    margin-top: 10px;
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
-.btn:hover {
-    background: #ccc;
+.project-card p {
+    font-size: 1rem;
 }
 
 /* Contact Section */
+#contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
 .social-icons a {
-    color: white;
-    font-size: 20px;
     margin: 0 10px;
-    transition: 0.3s ease;
+    color: #fff;
+    font-size: 2rem;
+    transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: gray;
+    color: #7d7c78;
 }
 
-/* Footer */
-.copyright {
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #feda37;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
     margin-top: 20px;
-    padding: 15px 0;
-    background: rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e67e22;
+}
+
+/* Copyright Section */
+.copyright {
     text-align: center;
-    font-size: 14px;
+    padding: 20px;
+    background-color: #121212;
+}
+
+.copyright p {
+    font-size: 1rem;
 }

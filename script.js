@@ -9,4 +9,3 @@ document.addEventListener("DOMContentLoaded", function () {
         sidemenu.style.right = "-200px";
     };
 });
-
