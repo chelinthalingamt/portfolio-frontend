@@ -1,59 +1,151 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
 /* Navbar */
 header {
-    background: #1e1e1e; /* Dark solid background */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
-}
-
-/* Hero Section */
-#home {
-    background: #121212;
-    color: white;
-    text-align: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Hero Section Title */
-.header-text h1 {
-    font-size: 2rem; /* Reduced size */
-    color: white; /* Plain white text */
-    text-shadow: none; /* Remove the yellow glow effect */
-    font-weight: bold;
-    text-align: center;
-}
-
-/* Navigation Bar */
-nav {
-    background: black; /* Change to black to match the rest of the page */
-    padding: 15px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
     z-index: 100;
+    background: rgba(0, 0, 0, 0.6); /* Glossy Transparent Effect */
+    backdrop-filter: blur(10px);
+    padding: 15px 50px;
 }
 
-/* Navigation Links */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Name in Navbar */
+.navbar .name {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+}
+
+/* Navigation Menu */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
+}
+
+nav ul li {
+    position: relative;
 }
 
 nav ul li a {
-    color: white; /* Ensure text is white for visibility */
     text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: 0.3s ease;
+}
+
+/* Line Animation on Hover */
+nav ul li a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0%;
+    background: white;
+    transition: width 0.3s ease-in-out;
+    margin: auto;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-text {
+    font-size: 40px;
     font-weight: bold;
-    transition: color 0.3s ease;
+    color: white;
+    text-align: center;
+    margin-top: 150px;
 }
 
-nav ul li a:hover {
-    color: gray; /* Subtle hover effect */
+/* Sections */
+#about, #services, #projects, #contact {
+    padding: 50px 20px;
+    text-align: center;
 }
 
+/* Services & Projects Containers */
+.services-list, .projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
+/* Cards */
+.project-card, .services-list div {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    backdrop-filter: blur(5px);
+}
+
+/* Hover Effects */
+.project-card:hover, .services-list div:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #ccc;
+}
+
+/* Contact Section */
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: gray;
+}
+
+/* Footer */
+.copyright {
+    margin-top: 20px;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    font-size: 14px;
+}
