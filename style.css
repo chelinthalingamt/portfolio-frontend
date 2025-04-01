@@ -37,10 +37,18 @@ header {
 
 /* Name in Navbar */
 .navbar .name {
+    display: flex;
+    align-items: center; /* Aligns the image and text in a row */
     font-size: 24px;
     font-weight: bold;
     color: white;
     white-space: nowrap;
+}
+
+.nav-logo {
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+    margin-right: 30px; /* Creates spacing between the image and text */
 }
 
 /* Navigation Menu */
@@ -118,6 +126,39 @@ header.scrolled {
     }
     50% {
         top: -20px; /* Height of the floating effect */
+    }
+}
+/* Refined Subtle Glowing effect for the name (More Visible Blue Glow) */
+.glowing-name {
+    position: relative;
+    font-size: 3rem; /* Adjust size if needed */
+    color: #fff; /* White color for the name */
+    text-shadow: 
+        0 0 4px rgba(0, 123, 255, 0.8), /* Stronger blue glow with higher opacity */
+        0 0 8px rgba(0, 123, 255, 0.6), /* More visible blue glow */
+        0 0 12px rgba(0, 123, 255, 0.4); /* Wider blue glow */
+    animation: glow 3s ease-in-out infinite;
+}
+
+/* Smooth Glowing animation */
+@keyframes glow {
+    0% {
+        text-shadow: 
+            0 0 4px rgba(0, 123, 255, 0.8),
+            0 0 8px rgba(0, 123, 255, 0.6),
+            0 0 12px rgba(0, 123, 255, 0.4);
+    }
+    50% {
+        text-shadow: 
+            0 0 6px rgba(0, 123, 255, 1), 
+            0 0 12px rgba(0, 123, 255, 0.8), 
+            0 0 16px rgba(0, 123, 255, 0.6);
+    }
+    100% {
+        text-shadow: 
+            0 0 4px rgba(0, 123, 255, 0.8),
+            0 0 8px rgba(0, 123, 255, 0.6),
+            0 0 12px rgba(0, 123, 255, 0.4);
     }
 }
 
@@ -302,5 +343,7 @@ header.scrolled {
 .copyright p {
     font-size: 1rem;
 }
+
+
 
 
