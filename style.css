@@ -24,24 +24,36 @@ header {
     text-align: center;
 }
 
-/* Navbar Links */
+/* Navigation Bar */
+nav {
+    background: black; /* Change to black to match the rest of the page */
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
 nav ul li a {
-    color: #ffffff;
-    transition: 0.3s;
+    color: white; /* Ensure text is white for visibility */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #f1c40f; /* Soft yellow on hover */
-}
-
-/* Button Fix */
-.btn {
-    background: #f1c40f;
-    color: black;
-}
-
-.btn:hover {
-    background: #ffeb3b;
+    color: gray; /* Subtle hover effect */
 }
 
 
