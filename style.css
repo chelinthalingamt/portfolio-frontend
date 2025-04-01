@@ -77,9 +77,20 @@ nav ul li a::after {
     text-align: center; /* Centering the underline */
 }
 
+/* Navbar Link Hover & Active State */
 nav ul li a:hover::after {
     width: 100%;
+    background: #1e90ff; /* Blue Accent Color */
 }
+
+nav ul li a {
+    color: #fff;
+}
+
+nav ul li a.active {
+    color: #1e90ff; /* Blue Accent Color */
+}
+
 
 /* Adjust scroll-margin-top for sections to prevent overlap with navbar */
 #about, #services, #projects, #contact {
@@ -93,6 +104,30 @@ header.scrolled {
     background: rgba(0, 0, 0, 0.9);
 }
 
+/* Floating Text */
+.float-text {
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+    display: inline-block;
+}
+
+/* Keyframes for floating animation */
+@keyframes float {
+    0%, 100% {
+        top: 0;
+    }
+    50% {
+        top: -20px; /* Height of the floating effect */
+    }
+}
+
+/* Positioning "Web Developer" text above */
+.web-developer-text {
+    position: relative;
+    bottom: 10px; /* Keeps the text slightly above */
+    font-size: 1.5rem; /* Adjust size if necessary */
+    color: #fff; /* Make it white */
+}
 
 /* Home Section */
 #home {
@@ -151,21 +186,18 @@ header.scrolled {
 
 .service-item {
     background-color: #222;
-    padding: 30px;
+    padding: 40px; 
     border-radius: 10px;
-    width: 250px;
+    width: 350px; 
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px; 
 }
 
 .service-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.service-item:hover i {
-    color: #feda37;
-    transform: scale(1.2);
+    box-shadow: 0 4px 12px rgba(30, 144, 255, 0.3); 
+    border: 2px solid #1e90ff; 
 }
 
 .service-item i {
@@ -198,16 +230,18 @@ header.scrolled {
 
 .project-card {
     background-color: #222;
-    padding: 30px;
+    padding: 40px; 
     border-radius: 10px;
-    width: 300px;
+    width: 350px; 
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px; 
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(30, 144, 255, 0.3); 
+    border: 2px solid #1e90ff; 
 }
 
 .project-card h3 {
@@ -238,13 +272,13 @@ header.scrolled {
 }
 
 .social-icons a:hover {
-    color: #7d7c78;
+    color: #c4c7ca; 
 }
 
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #feda37;
+    background-color: #5ca8f4;
     color: black;
     text-decoration: none;
     border-radius: 5px;
@@ -253,8 +287,9 @@ header.scrolled {
     transition: background-color 0.3s ease;
 }
 
+/* Button Hover Effect */
 .btn:hover {
-    background-color: #e67e22;
+    background-color: #1e90ff; 
 }
 
 /* Copyright Section */
@@ -267,3 +302,5 @@ header.scrolled {
 .copyright p {
     font-size: 1rem;
 }
+
+
