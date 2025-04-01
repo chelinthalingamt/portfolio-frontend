@@ -68,7 +68,276 @@
 
     <section id="contact">
         <h2>Contact</h2>
-        <p><i class="fa-regular fa-paper-plane"></i> chelinthalingamt@example.com</p>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Portfolio | Chelintha Lingam T</title>
+            <link rel="stylesheet" href="style.css">
+            <script src="script.js" defer></script>
+            <script src="https://kit.fontawesome.com/434efcef7c.js" crossorigin="anonymous"></script>
+            <style>
+                /* Reset */
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    font-family: "Poppins", sans-serif;
+                }
+        
+                body {
+                    background-color: #121212;
+                    color: #fff;
+                    text-align: center;
+                }
+        
+                /* Navbar */
+                header {
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+                    padding: 15px 50px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    z-index: 1000;
+                }
+        
+                .logo {
+                    width: 120px;
+                }
+        
+                nav ul {
+                    list-style: none;
+                    display: flex;
+                    gap: 20px;
+                }
+        
+                nav ul li a {
+                    text-decoration: none;
+                    color: #fff;
+                    font-weight: 600;
+                    transition: color 0.3s ease;
+                }
+        
+                nav ul li a:hover {
+                    color: #ffeb3b;
+                }
+        
+                /* Mobile Menu */
+                .fa-bars, .fa-x {
+                    display: none;
+                    font-size: 24px;
+                    cursor: pointer;
+                }
+        
+                /* Hero Section */
+                #home {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    flex-direction: column;
+                }
+        
+                .header-text h1 span {
+                    background: linear-gradient(90deg, #ffeb3b, #ff5722);
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+        
+                /* Sections */
+                section {
+                    padding: 80px 20px;
+                    text-align: center;
+                }
+        
+                .services-list, .projects-container {
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
+                    flex-wrap: wrap;
+                    max-width: 1200px;
+                    margin: auto;
+                }
+        
+                .project-card, .services-list div {
+                    background: #222;
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+                    flex: 1 1 300px;
+                    transition: 0.3s ease-in-out;
+                }
+        
+                .project-card:hover, .services-list div:hover {
+                    transform: translateY(-5px);
+                    background: #333;
+                }
+        
+                .services-list div i {
+                    font-size: 40px;
+                    margin-bottom: 10px;
+                }
+        
+                /* Contact */
+                #contact p {
+                    margin-bottom: 10px;
+                    font-size: 18px;
+                }
+        
+                #contact a {
+                    color: #ffeb3b;
+                    text-decoration: none;
+                }
+        
+                .social-icons {
+                    margin-top: 15px;
+                }
+        
+                .social-icons a {
+                    color: #fff;
+                    font-size: 24px;
+                    margin: 0 10px;
+                    transition: 0.3s;
+                }
+        
+                .social-icons a:hover {
+                    color: #ffeb3b;
+                }
+        
+                /* Button */
+                .btn {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background: #f1c40f;
+                    color: black;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    transition: 0.3s ease;
+                    margin-top: 10px;
+                }
+        
+                .btn:hover {
+                    background: #ffeb3b;
+                }
+        
+                /* Footer */
+                .copyright {
+                    text-align: center;
+                    padding: 20px 0;
+                    font-size: 14px;
+                }
+        
+                /* Responsive */
+                @media (max-width: 768px) {
+                    nav ul {
+                        display: none;
+                        flex-direction: column;
+                        position: absolute;
+                        top: 60px;
+                        right: 0;
+                        background: #333;
+                        width: 200px;
+                        text-align: right;
+                        padding: 20px;
+                    }
+        
+                    .fa-bars {
+                        display: block;
+                    }
+        
+                    .fa-x {
+                        display: block;
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                    }
+        
+                    .services-list, .projects-container {
+                        flex-direction: column;
+                    }
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <nav>
+                    <img src="Images/logo.png" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+            </header>
+            
+            <section id="home">
+                <div class="header-text">
+                    <p>Web Developer</p>
+                    <h1>Hi, I am <span>Chelintha Lingam T</span><br> from Chennai</h1>
+                </div>
+            </section>
+        
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Creative developer with a love for coding and design.</p>
+            </section>
+        
+            <section id="services">
+                <h2>My Services</h2>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-pen-nib"></i>
+                        <h2>Web Design</h2>
+                        <p>Creating clean, responsive, and visually captivating websites.</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Web Development</h2>
+                        <p>Building functional and interactive web applications.</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-computer"></i>
+                        <h2>Machine Learning</h2>
+                        <p>Developing AI-powered solutions for real-world problems.</p>
+                    </div>
+                </div>
+            </section>
+        
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="projects-container">
+                    <div class="project-card">Social Media Apps</div>
+                    <div class="project-card">Portfolio Website</div>
+                    <div class="project-card">Gaming Website</div>
+                </div>
+            </section>
+        
+            <section id="contact">
+                <h2>Contact</h2>
+                <p><i class="fa-regular fa-paper-plane"></i> <a href="mailto:chelinthalingamt@gmail.com">chelinthalingamt@gmail.com</a></p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:+91XXXXXXXXXX">+91 XXXXXXXXXX</a></p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <a href="Images/Resume.docx" download class="btn">Download CV</a>
+            </section>
+        
+            <div class="copyright">
+                <p>&copy; 2024 Chelintha Lingam T. All rights reserved.</p>
+            </div>
+        </body>
+        </html>
+                <p><i class="fa-regular fa-paper-plane"></i> chelinthalingamt@gmail.com</p>
         <p><i class="fa-solid fa-phone"></i> +91 XXXXXXXXXX</p>
         <div class="social-icons">
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
